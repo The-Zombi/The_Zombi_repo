@@ -9,7 +9,10 @@ public class PlayerManager : MonoBehaviour
     
     //移動速度
     const float normalSpeed = 0.1f;
-    const float slowSpeed = 0.05f;
+    const float slowSpeed = 0.02f;
+    
+    //ジャンプ力
+    const float jumpForce = 300f;
 
 
     public int HP;
@@ -28,7 +31,7 @@ public class PlayerManager : MonoBehaviour
     public float walkSpeed;
 
     bool isJumping = false;
-    const float jumpForce = 300f;
+
 
     Vector3 playerScale;
     float playDir = 0;
@@ -160,6 +163,13 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Item"))
         {
             isJumping = false;
+            walkSpeed = normalSpeed;
+        }
+
+        //沼地にいる場合
+        if(collision.gameObject.tag  == "Swamp"){
+            isJumping = false;
+            walkSpeed = slowSpeed;
         }
     }
 
@@ -271,8 +281,7 @@ public class PlayerManager : MonoBehaviour
         //プレイヤーの移動
         Vector2 speed = new Vector2(walkSpeed*direction, 0);
         transform.Translate(speed);
-        Debug.Log(normalSpeed);
-        Debug.Log(speed);
+        Debug.Log(walkSpeed);
     }
 
     //x=2.5fをギリギリ飛び越せる

@@ -36,6 +36,7 @@ public class ItemManager : MonoBehaviour {
             enemyManagerScript = collision.gameObject.GetComponent<EnemyManager>();
             enemyManagerScript.damaged(damagePoint);
             enemyManagerScript.knockBack(gameObject);
+            Destroy(this.gameObject);
         }
 
         if (collision.gameObject.tag == "Ground")
