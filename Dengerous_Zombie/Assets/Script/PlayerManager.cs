@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
     public float walkSpeed;
 
     bool isJumping = false;
-    public float jumpSpeed = 100;
+    const float jumpForce = 300f;
 
     Vector3 playerScale;
     float playDir = 0;
@@ -280,7 +280,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (isJumping == false)
         {
-            rb2d.AddForce(new Vector2(0, 200));
+            rb2d.AddForce(new Vector2(0, jumpForce));
             isJumping = true;
         }
     }
