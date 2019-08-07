@@ -233,7 +233,10 @@ public class PlayerManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Goal"){
             Debug.Log("goal");
-            SceneManager.LoadScene("stage1-1");
+            // 現在読み込んでいるシーンのインデックスを取得
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            // 取得したシーンインデックスで再読込み
+            SceneManager.LoadScene(currentSceneIndex+1);
         }
     }
 
