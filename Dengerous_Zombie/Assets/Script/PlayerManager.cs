@@ -14,6 +14,10 @@ public class PlayerManager : MonoBehaviour
     //ジャンプ力
     const float jumpForce = 300f;
 
+    //回復アイテム
+    const int pillsHP = 40;
+    const int potionErosion = 20;
+
 
     public int HP;
     public int HPMax = 100;
@@ -215,17 +219,21 @@ public class PlayerManager : MonoBehaviour
         if(other.gameObject.tag == "Swamp")
             walkSpeed = slowSpeed;
 
-                //　アイテム接触判定
+        //　アイテム接触判定
         if (other.gameObject.tag == "Item" && !invisibleFlag)
         {
-
             //　アイテムを持つ
             if (Input.GetKeyDown(KeyCode.X) && !HasItem)
             {
                 item = other.gameObject;
                 item.active = false;
                 other.isTrigger = false;
-
+                
+                if(item.name == "pills"){
+                    HP += pillsHP;
+                }else if(item.name == "potion_1"){
+                    erosion -= potionErosion;
+                }else{
                 //アイテムを動かせるようにする
                 Rigidbody2D itemRb = item.GetComponent<Rigidbody2D>();
                 itemRb.bodyType = RigidbodyType2D.Dynamic;
@@ -238,6 +246,7 @@ public class PlayerManager : MonoBehaviour
                 item.transform.position = transform.position + offset;
                 item.transform.parent = transform;
                 StartCoroutine(changeHasItem());
+                }
             }
         }
     }

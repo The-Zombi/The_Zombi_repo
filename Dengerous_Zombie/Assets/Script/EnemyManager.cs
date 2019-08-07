@@ -119,7 +119,7 @@ public class EnemyManager : MonoBehaviour {
 
         // ノックバックさせる
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(knockBackDirection * 300);
+        rb.AddForce(knockBackDirection * 100);
         
     }
 
