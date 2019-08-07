@@ -47,9 +47,19 @@ public class PlayerManager : MonoBehaviour
     public Animator animator;
     Rigidbody2D rb2d;
 
+    private AudioSource audioSource;
+    public AudioClip walkSE;
+    public AudioClip revivalSE;
+    public AudioClip itemSE;
+    public AudioClip damagedSE;
+    public AudioClip gameOverSE;
+    
+
     bool isAttacking;
 
     string state;
+
+    public bool playerDied = false;
 
 
 
@@ -57,18 +67,22 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         HP = HPMax;
-        erosion = 0;
+        erosion = 10;
 
         invisibleFlag = false;
         attackcollider = GameObject.Find("attackCollider").GetComponent<BoxCollider2D>();
         rb2d = GetComponent<Rigidbody2D>();
         HasItem = false;
         playerScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+
         animator = gameObject.GetComponent<Animator>();
         animator.speed = 0;
+
         isAttacking = false;
         state = "right";
         walkSpeed = normalSpeed;
+
+        audioSource = gameObject.GetComponent<AudioSource>();
         
 
     }
@@ -138,7 +152,7 @@ public class PlayerManager : MonoBehaviour
 
 
         //無敵状態
-        if (invisibleFlag)
+        if (invisibleFlag && !playerDied)
         {
             Renderer playerRenderer = GetComponent<Renderer>();
 
@@ -151,7 +165,7 @@ public class PlayerManager : MonoBehaviour
             }
 
             invisibleTimer += Time.deltaTime;
-            if (invisibleTimer > invisibleInterval)
+            if (invisibleTimer > invisibleInterval && !playerDied)
             {
                 // 無敵時間終了
                 invisibleTimer = 0;
@@ -159,6 +173,18 @@ public class PlayerManager : MonoBehaviour
 
                 playerRenderer.enabled = true;
             }
+        }
+
+        //侵食率100以上で死亡
+        if ((erosion >= 100 || transform.position.y < -10) && !playerDied)
+        {
+            gameOver();
+        }
+        else if (HP <= 0 && !playerDied) //侵食率100以上でない時，HP０になると侵食率を10上げて復活
+        {
+            HP = 100;
+            erosion += 10;
+            audioSource.PlayOneShot(revivalSE);
         }
     }
 
@@ -170,8 +196,11 @@ public class PlayerManager : MonoBehaviour
             walkSpeed = normalSpeed;
         }
 
+        Debug.Log(collision.gameObject.name);
+        Debug.Log(collision.gameObject.name.Contains("Forest_deco_covers"));
+
         //沼地にいる場合
-        if(collision.gameObject.tag  == "Swamp"){
+        if(collision.gameObject.tag == "Swamp" || collision.gameObject.name.Contains("Forest_deco_covers")){
             isJumping = false;
             walkSpeed = slowSpeed;
         }
@@ -188,37 +217,27 @@ public class PlayerManager : MonoBehaviour
             int damagePoint = enemyManagerScript.damagePoint;
             //int erosionPoint = enemyManagerScript.erosionPoint;
             HP -= damagePoint;
-            //erosion += erosionPoint;
-
-            //侵食率100以上で死亡
-            if (erosion >= 100)
-            {
-                Destroy(gameObject);
-            }
-            else if (HP <= 0) //侵食率100以上でない時，HP０になると侵食率を10上げて復活
-            {
-                HP = 100;
-                erosion += 10;
-            }
+            audioSource.PlayOneShot(damagedSE);
+            
 
             invisibleFlag = true;
             knockBack(enemy);
+        }
+
+        //沼地にいる場合
+        if(collision.gameObject.tag == "Swamp" || collision.gameObject.name.Contains("Forest_deco_covers")){
+            walkSpeed = slowSpeed;
         }
     }
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Goal"){
             Debug.Log("goal");
-            SceneManager.LoadScene("test");
+            SceneManager.LoadScene("stage1-1");
         }
     }
 
     void OnTriggerStay2D(Collider2D other){
-
-        //沼地での歩行スピード変更
-        if(other.gameObject.tag == "Swamp")
-            walkSpeed = slowSpeed;
-
         //　アイテム接触判定
         if (other.gameObject.tag == "Item" && !invisibleFlag)
         {
@@ -231,8 +250,10 @@ public class PlayerManager : MonoBehaviour
                 
                 if(item.name == "pills"){
                     HP += pillsHP;
+                    audioSource.PlayOneShot(itemSE);
                 }else if(item.name == "potion_1"){
                     erosion -= potionErosion;
+                    audioSource.PlayOneShot(itemSE);
                 }else{
                 //アイテムを動かせるようにする
                 Rigidbody2D itemRb = item.GetComponent<Rigidbody2D>();
@@ -292,6 +313,7 @@ public class PlayerManager : MonoBehaviour
             animator.SetBool("rightWalkBool", false);
             animator.SetBool("leftWalkBool", true);
             state = "left";
+  
         }
         //プレイヤーの移動
         Vector2 speed = new Vector2(walkSpeed*direction, 0);
@@ -315,6 +337,29 @@ public class PlayerManager : MonoBehaviour
         HasItem = !HasItem;
         yield break;
     }
+
+    public void gameOver(){
+        playerDied = true;
+        HP = 0;
+        erosion = erosionMax;
+        audioSource.PlayOneShot(gameOverSE);
+        gameObject.GetComponent<Renderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        rb2d.bodyType = RigidbodyType2D.Kinematic;
+        StartCoroutine(SceneReload());
+        
+    }
+
+      IEnumerator SceneReload()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene (SceneManager.GetActiveScene().name);
+        yield break;
+    }
+
+
+
+
 
 
 

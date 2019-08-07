@@ -22,12 +22,18 @@ public class EnemyManager : MonoBehaviour {
     float invisibleTimer;
     float invisibleInterval = 0.5f;
 
+    private AudioSource audioSource;
+    public AudioClip damagedSE;
+
+
 
     // Use this for initialization
     void Start () {
         player = GameObject.Find("Player");
         enemyScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
         invisibleFlag = false;
+
+        audioSource = gameObject.GetComponent<AudioSource>();
 
     }
 	
@@ -47,8 +53,6 @@ public class EnemyManager : MonoBehaviour {
             transform.position + new Vector3(1.05f*dir, -1.5f, 0),
             transform.position + new Vector3(1.05f*dir, -1.6f, 0)
         );
-        //接地状態を出力する
-        Debug.Log("grounded ->" + ground);
 
         float speed = walkspeed;
         if(!ground)
@@ -126,6 +130,7 @@ public class EnemyManager : MonoBehaviour {
     public void damaged(int damage){
         HP -= damage;
         invisibleFlag = true;
+        audioSource.PlayOneShot(damagedSE);
     }
 
     void DelayMethod()
