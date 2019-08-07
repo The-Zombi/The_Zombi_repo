@@ -115,11 +115,11 @@ public class PlayerManager : MonoBehaviour
 
             if (state == "right")
             {
-                force = new Vector3(1000, 150, 0);
+                force = new Vector3(400, 60, 0);
             }
             else
             {
-                force = new Vector3(-1000, 150, 0);
+                force = new Vector3(-400, 60, 0);
                 offset.x *= -1;
             }
             item.active = true;
@@ -175,28 +175,6 @@ public class PlayerManager : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        //　アイテム接触判定
-        if (collision.gameObject.tag == "Item" && !invisibleFlag)
-        {
-
-            //　アイテムを持つ
-            if (Input.GetKeyDown(KeyCode.X) && !HasItem)
-            {
-                item = collision.gameObject;
-                item.active = false;
-                Vector3 offset;
-                if(state == "right")
-                    offset = new Vector3(0.7f, 0.5f, 0);
-                else
-                    offset = new Vector3(-0.7f, 0.5f, 0);
-                item.transform.position = transform.position + offset;
-                item.transform.parent = transform;
-                StartCoroutine(changeHasItem());
-            }
-        }
-
-        
-
         // 敵との接触判定
         if (collision.gameObject.tag == "Enemy" && !invisibleFlag)
         {
@@ -232,8 +210,36 @@ public class PlayerManager : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D other){
+
+        //沼地での歩行スピード変更
         if(other.gameObject.tag == "Swamp")
             walkSpeed = slowSpeed;
+
+                //　アイテム接触判定
+        if (other.gameObject.tag == "Item" && !invisibleFlag)
+        {
+
+            //　アイテムを持つ
+            if (Input.GetKeyDown(KeyCode.X) && !HasItem)
+            {
+                item = other.gameObject;
+                item.active = false;
+                other.isTrigger = false;
+
+                //アイテムを動かせるようにする
+                Rigidbody2D itemRb = item.GetComponent<Rigidbody2D>();
+                itemRb.bodyType = RigidbodyType2D.Dynamic;
+
+                Vector3 offset;
+                if(state == "right")
+                    offset = new Vector3(0.7f, 0.5f, 0);
+                else
+                    offset = new Vector3(-0.7f, 0.5f, 0);
+                item.transform.position = transform.position + offset;
+                item.transform.parent = transform;
+                StartCoroutine(changeHasItem());
+            }
+        }
     }
 
     private void knockBack(GameObject enemy)
@@ -281,7 +287,6 @@ public class PlayerManager : MonoBehaviour
         //プレイヤーの移動
         Vector2 speed = new Vector2(walkSpeed*direction, 0);
         transform.Translate(speed);
-        Debug.Log(walkSpeed);
     }
 
     //x=2.5fをギリギリ飛び越せる

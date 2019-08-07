@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
+    
+
     public int damagePoint = 20;
     public int erosionPoint = 0;
+    public float walkspeed = 0.03f;
+
     GameObject player;
     int HP = 150;
     string enemyDir;
@@ -18,27 +22,45 @@ public class EnemyManager : MonoBehaviour {
     float invisibleTimer;
     float invisibleInterval = 0.5f;
 
+
     // Use this for initialization
     void Start () {
         player = GameObject.Find("Player");
         enemyScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
         invisibleFlag = false;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+        float dir = 1f;
         if(transform.position.x < player.transform.position.x){
             enemyDir = "right";
-            transform.Translate(new Vector3(0.03f, 0, 0));
+            dir = 1f;
         }else if(transform.position.x > player.transform.position.x){
             enemyDir = "left";
-            transform.Translate(new Vector3(-0.03f, 0, 0));
+            dir = -1f;
         }
+
+        //ゾンビ手前に足場があるか確認
+        bool ground = Physics2D.Linecast(
+            transform.position + new Vector3(1.05f*dir, -1.5f, 0),
+            transform.position + new Vector3(1.05f*dir, -1.6f, 0)
+        );
+        //接地状態を出力する
+        Debug.Log("grounded ->" + ground);
+
+        float speed = walkspeed;
+        if(!ground)
+            speed = 0;
+
 
         if(enemyDir == "right"){
             transform.localScale = enemyScale;
+            transform.Translate(new Vector3(speed, 0, 0));
         }else if(enemyDir == "left"){
             transform.localScale = new Vector3(-enemyScale.x, enemyScale.y, enemyScale.z);
+            transform.Translate(new Vector3(-speed, 0, 0));
         }
 
         if (HP <= 0)
@@ -82,6 +104,7 @@ public class EnemyManager : MonoBehaviour {
             damaged(50);
 
         }
+        Debug.Log(gameObject.name);
         
 	}
 	

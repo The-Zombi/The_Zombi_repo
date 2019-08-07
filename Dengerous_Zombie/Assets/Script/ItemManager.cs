@@ -7,9 +7,17 @@ public class ItemManager : MonoBehaviour {
 
     int damagePoint = 20;   //アイテムでの攻撃ダメージ量
     string state;   //アイテムの状態
+    Collider2D coll;
+    Rigidbody2D rb2d;
+
 
 	void Start () {
         state = "normal";   //通常状態
+        coll= gameObject.GetComponent<Collider2D>();
+        rb2d = gameObject.GetComponent<Rigidbody2D>();
+        coll.isTrigger = true;
+        rb2d.bodyType = RigidbodyType2D.Kinematic;
+
 	}
 	
 	// Update is called once per frame
@@ -40,6 +48,6 @@ public class ItemManager : MonoBehaviour {
         }
 
         if (collision.gameObject.tag == "Ground")
-            state = "normal";
+            Destroy(this.gameObject);
     }
 }
