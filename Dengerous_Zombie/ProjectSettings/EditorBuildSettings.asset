@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Stage1-1.unity
     guid: edaf33818ab48b444bdfb3856fe0265d
@@ -18,23 +15,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage1-3.unity
     guid: d75b61df0ea65d043b44f7d4dac6eca4
   - enabled: 1
-    path: Assets/Scenes/Stage1-4.unity
-    guid: 302a220b625f3b24f93fddbc7d96cea7
-  - enabled: 1
     path: Assets/Scenes/Stage2-1.unity
     guid: 22663c07e4ed01d40a17421ad56cb234
   - enabled: 1
     path: Assets/Scenes/Stage2-2.unity
     guid: 2c141e85f2dcadb4a9757a880c49e35a
   - enabled: 1
+    path: Assets/Scenes/Stage2-3.unity
+    guid: 11946bea46e4b3342a9de54ad5c4664d
+  - enabled: 1
     path: Assets/Scenes/Stage3-1.unity
     guid: 73b5be78427455f488df088ce5aee5d0
+  - enabled: 1
+    path: Assets/Scenes/Stage3-2.unity
+    guid: 2283b4a815f12a54a9256a96c5db7bae
+  - enabled: 1
+    path: Assets/Scenes/Stage3-3.unity
+    guid: ff45f36ea97084940b34851d564902f5
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/test.unity
-    guid: 41eb746d5a0954113b481e7cf1582546
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

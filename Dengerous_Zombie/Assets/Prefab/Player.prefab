@@ -365,6 +365,11 @@ MonoBehaviour:
   walkSpeed: 0.000001
   animator: {fileID: 0}
   walkSE: {fileID: 8300000, guid: 1d9dbbc5372f44028ba9aefde06f2206, type: 3}
+  revivalSE: {fileID: 8300000, guid: b097d96045a924df7a28e9056c06e47f, type: 3}
+  itemSE: {fileID: 8300000, guid: e9c853b5253d74615bb3c713ade4b6a3, type: 3}
+  damagedSE: {fileID: 8300000, guid: 0dc3e4c4ac2d94bafbc06957dcbd9bb8, type: 3}
+  gameOverSE: {fileID: 8300000, guid: d2be257fe32ce4cb685736402a69dc36, type: 3}
+  playerDied: 0
 --- !u!114 &4217280175639267777
 MonoBehaviour:
   m_ObjectHideFlags: 0
