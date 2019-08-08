@@ -33,6 +33,7 @@ RectTransform:
   - {fileID: 4217280175295181318}
   - {fileID: 4217280176210751882}
   - {fileID: 4217280175657076468}
+  - {fileID: 7535903151937844736}
   m_Father: {fileID: 4217280175639267839}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53,7 +54,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -74,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -369,6 +370,9 @@ MonoBehaviour:
   itemSE: {fileID: 8300000, guid: e9c853b5253d74615bb3c713ade4b6a3, type: 3}
   damagedSE: {fileID: 8300000, guid: 0dc3e4c4ac2d94bafbc06957dcbd9bb8, type: 3}
   gameOverSE: {fileID: 8300000, guid: d2be257fe32ce4cb685736402a69dc36, type: 3}
+  clearSE: {fileID: 8300000, guid: 1fcd066565a804da487c1c6bb46fa543, type: 3}
+  swingSE: {fileID: 8300000, guid: e8c72044de01e4558b9ac070b555808c, type: 3}
+  powerDownSE: {fileID: 0}
   playerDied: 0
 --- !u!114 &4217280175639267777
 MonoBehaviour:
@@ -384,6 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HPgage: {fileID: 0}
   erosionGage: {fileID: 0}
+  gameOverImage: []
 --- !u!95 &4217280175639267776
 Animator:
   serializedVersion: 3
@@ -544,6 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HPgage: {fileID: 4217280175837043207}
   erosionGage: {fileID: 0}
+  gameOverImage: []
 --- !u!1 &4217280175837043205
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +876,80 @@ MonoBehaviour:
   m_Sprite: {fileID: 21300000, guid: daade4d7fc67143ba8b4af7abdd28f9d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!1 &9074832657676115905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7535903151937844736}
+  - component: {fileID: 2183757155391922063}
+  - component: {fileID: 6755110435917931751}
+  m_Layer: 5
+  m_Name: gameOverImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7535903151937844736
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074832657676115905}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6.31432, y: 6.31432, z: 6.6003356}
+  m_Children: []
+  m_Father: {fileID: 4217280174689878064}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -6.5041504, y: -0.000045776367}
+  m_SizeDelta: {x: -639.00006, y: -225.13242}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2183757155391922063
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074832657676115905}
+  m_CullTransparentMesh: 0
+--- !u!114 &6755110435917931751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074832657676115905}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 6d6e252439f584ed29d587223a48ebf1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

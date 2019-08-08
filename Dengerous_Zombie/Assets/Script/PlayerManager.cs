@@ -53,6 +53,9 @@ public class PlayerManager : MonoBehaviour
     public AudioClip itemSE;
     public AudioClip damagedSE;
     public AudioClip gameOverSE;
+    public AudioClip clearSE;
+    public AudioClip swingSE;
+    public AudioClip powerDownSE;
     
 
     bool isAttacking;
@@ -142,6 +145,7 @@ public class PlayerManager : MonoBehaviour
             }
             item.active = true;
             rb2d.AddForceAtPosition(force, itemPosition + offset);
+            audioSource.PlayOneShot(swingSE);
             StartCoroutine(changeHasItem());
 
             ItemManager itemManagerScript;
@@ -196,11 +200,9 @@ public class PlayerManager : MonoBehaviour
             walkSpeed = normalSpeed;
         }
 
-        Debug.Log(collision.gameObject.name);
-        Debug.Log(collision.gameObject.name.Contains("Forest_deco_covers"));
 
         //沼地にいる場合
-        if(collision.gameObject.tag == "Swamp" || collision.gameObject.name.Contains("Forest_deco_covers")){
+        if(collision.gameObject.name.Contains("Forest_deco_covers")){
             isJumping = false;
             walkSpeed = slowSpeed;
         }
@@ -225,15 +227,17 @@ public class PlayerManager : MonoBehaviour
         }
 
         //沼地にいる場合
-        if(collision.gameObject.tag == "Swamp" || collision.gameObject.name.Contains("Forest_deco_covers")){
+        if(collision.gameObject.name.Contains("Forest_deco_covers")){
             walkSpeed = slowSpeed;
         }
     }
 
+    //ゴール判定
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Goal"){
-            Debug.Log("goal");
-            SceneManager.LoadScene("stage1-1");
+            audioSource.PlayOneShot(clearSE);
+            Invoke("nextScene", 3.0f);
+
         }
     }
 
@@ -339,6 +343,9 @@ public class PlayerManager : MonoBehaviour
     }
 
     public void gameOver(){
+        UIManager uimanager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        uimanager.gameOver();
+
         playerDied = true;
         HP = 0;
         erosion = erosionMax;
@@ -355,6 +362,16 @@ public class PlayerManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene (SceneManager.GetActiveScene().name);
         yield break;
+    }
+
+    void nextScene()
+    {
+        // 現在読み込んでいるシーンのインデックスを取得
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        // 取得したシーンインデックスで再読込み
+        if(currentSceneIndex == 8) currentSceneIndex = -1;
+        SceneManager.LoadScene(currentSceneIndex+1);
+
     }
 
 

@@ -22,11 +22,11 @@ public class CameraManager : MonoBehaviour
         transform.position = new Vector3(player.transform.position.x, 0, -10);//プレイヤーに追随するカメラ
         if (transform.position.x < -13)//見切れぬように適宜値変更
         {
-            transform.position = new Vector3(-13, 5, -10);
+            transform.position = new Vector3(-13, 0, -10);
         }
-        if (transform.position.x > 1000)
+        if (transform.position.x > 220)
         {
-            transform.position = new Vector3(13, 5, -10);
+            transform.position = new Vector3(220, 0, -10);
         }
     }
 }
