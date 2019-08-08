@@ -88,7 +88,7 @@ public class PlayerManager : MonoBehaviour
 
         audioSource = gameObject.GetComponent<AudioSource>();
 
-        Invoke("destroyStageClear", 0.5f);
+        Invoke("destroyGameStart", 1.0f);
 
     }
 
@@ -380,10 +380,9 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    void destroyStageClear()
+    void destroyGameStart()
     {
-        Debug.Log("kesitai");
-        GameObject.Find("stageClearImage").GetComponent<Image>().enabled = false;
+        GameObject.Find("gameStartImage").GetComponent<Image>().enabled = false;
     }
 
 
