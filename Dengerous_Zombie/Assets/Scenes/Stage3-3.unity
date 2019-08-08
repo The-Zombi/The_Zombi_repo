@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 27721091}
   m_Layer: 0
   m_Name: Forest_field (6)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2644,7 +2644,7 @@ GameObject:
   - component: {fileID: 116147620}
   m_Layer: 0
   m_Name: stage (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2894,7 +2894,7 @@ Transform:
   - {fileID: 194910192}
   - {fileID: 1290470191}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141758061
 GameObject:
@@ -4006,7 +4006,7 @@ GameObject:
   - component: {fileID: 190448832}
   m_Layer: 0
   m_Name: Forest_field (9)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4467,7 +4467,7 @@ GameObject:
   - component: {fileID: 203862016}
   m_Layer: 0
   m_Name: Forest_field (8)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4968,7 +4968,7 @@ GameObject:
   - component: {fileID: 219104657}
   m_Layer: 0
   m_Name: Stage (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5823,7 +5823,7 @@ GameObject:
   - component: {fileID: 268993786}
   m_Layer: 0
   m_Name: Forest_field (10)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8025,7 +8025,7 @@ GameObject:
   - component: {fileID: 381641275}
   m_Layer: 0
   m_Name: Forest_field (8)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9012,7 +9012,7 @@ GameObject:
   - component: {fileID: 425276486}
   m_Layer: 0
   m_Name: Forest_field (7)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11635,7 +11635,7 @@ GameObject:
   - component: {fileID: 537219921}
   m_Layer: 0
   m_Name: Stage (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13753,7 +13753,7 @@ GameObject:
   - component: {fileID: 625986119}
   m_Layer: 0
   m_Name: Forest_field
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13859,7 +13859,7 @@ GameObject:
   - component: {fileID: 627433562}
   m_Layer: 0
   m_Name: Forest_field (10)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18330,7 +18330,7 @@ GameObject:
   - component: {fileID: 796827668}
   m_Layer: 0
   m_Name: Forest_field (8)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19466,7 +19466,7 @@ GameObject:
   - component: {fileID: 848268262}
   m_Layer: 0
   m_Name: stage (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20862,7 +20862,7 @@ GameObject:
   - component: {fileID: 908054816}
   m_Layer: 0
   m_Name: Forest_field (7)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21074,7 +21074,7 @@ GameObject:
   - component: {fileID: 912230564}
   m_Layer: 0
   m_Name: Forest_field (10)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22134,7 +22134,7 @@ GameObject:
   - component: {fileID: 945059166}
   m_Layer: 0
   m_Name: Forest_field (6)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22346,7 +22346,7 @@ GameObject:
   - component: {fileID: 951222337}
   m_Layer: 0
   m_Name: Forest_field (7)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23091,7 +23091,7 @@ GameObject:
   - component: {fileID: 988614276}
   m_Layer: 0
   m_Name: Forest_field (10)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23991,7 +23991,7 @@ GameObject:
   - component: {fileID: 1019039259}
   m_Layer: 0
   m_Name: Forest_field (7)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24270,6 +24270,7 @@ GameObject:
   - component: {fileID: 1023915091}
   - component: {fileID: 1023915090}
   - component: {fileID: 1023915089}
+  - component: {fileID: 1023915093}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -24355,6 +24356,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1023915093
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023915088}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6207d32e41ab34ceabe3a36cc1b6f6e5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1028776544
 GameObject:
   m_ObjectHideFlags: 0
@@ -24727,7 +24824,7 @@ GameObject:
   - component: {fileID: 1057214523}
   m_Layer: 0
   m_Name: Forest_field
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25774,7 +25871,7 @@ GameObject:
   - component: {fileID: 1115615918}
   m_Layer: 0
   m_Name: Forest_field (7)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26131,7 +26228,7 @@ GameObject:
   - component: {fileID: 1135896934}
   m_Layer: 0
   m_Name: Forest_field
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27743,7 +27840,7 @@ PrefabInstance:
     - target: {fileID: 4217280175639267839, guid: f283ae914682b49688f1d11685fd2e68,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4217280175639267839, guid: f283ae914682b49688f1d11685fd2e68,
         type: 3}
@@ -28501,7 +28598,7 @@ GameObject:
   - component: {fileID: 1258603501}
   m_Layer: 0
   m_Name: stage (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28888,7 +28985,7 @@ GameObject:
   - component: {fileID: 1266190405}
   m_Layer: 0
   m_Name: Forest_field (9)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29465,7 +29562,7 @@ GameObject:
   - component: {fileID: 1294770508}
   m_Layer: 0
   m_Name: Forest_field (6)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30313,7 +30410,7 @@ GameObject:
   - component: {fileID: 1333089767}
   m_Layer: 0
   m_Name: Forest_field (7)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30603,7 +30700,7 @@ GameObject:
   - component: {fileID: 1341545556}
   m_Layer: 0
   m_Name: stage (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31069,7 +31166,7 @@ GameObject:
   - component: {fileID: 1362569371}
   m_Layer: 0
   m_Name: Forest_field
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31773,7 +31870,7 @@ GameObject:
   - component: {fileID: 1386355570}
   m_Layer: 0
   m_Name: Forest_field (6)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32249,7 +32346,7 @@ GameObject:
   - component: {fileID: 1412678040}
   m_Layer: 0
   m_Name: Forest_field (9)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32752,7 +32849,7 @@ GameObject:
   - component: {fileID: 1421093573}
   m_Layer: 0
   m_Name: Forest_field (10)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33255,7 +33352,7 @@ GameObject:
   - component: {fileID: 1439698463}
   m_Layer: 0
   m_Name: Forest_field (8)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34377,7 +34474,7 @@ Transform:
   - {fileID: 1902311770}
   - {fileID: 650795197}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484151676
 GameObject:
@@ -34710,7 +34807,7 @@ GameObject:
   - component: {fileID: 1492905718}
   m_Layer: 0
   m_Name: Forest_field (6)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36076,6 +36173,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1528910499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5612942300508204094, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_Name
+      value: Goal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 256.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5303872
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -170.30273
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612942300508204095, guid: e58a80370d2f9446b88689b5bfac9827,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e58a80370d2f9446b88689b5bfac9827, type: 3}
 --- !u!1 &1547651295
 GameObject:
   m_ObjectHideFlags: 0
@@ -38113,7 +38279,7 @@ GameObject:
   - component: {fileID: 1616228039}
   m_Layer: 0
   m_Name: Forest_field (8)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38325,7 +38491,7 @@ GameObject:
   - component: {fileID: 1623739026}
   m_Layer: 0
   m_Name: Forest_field (9)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38431,7 +38597,7 @@ GameObject:
   - component: {fileID: 1624095430}
   m_Layer: 0
   m_Name: Forest_field (6)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39701,7 +39867,7 @@ GameObject:
   - component: {fileID: 1659786994}
   m_Layer: 0
   m_Name: Forest_field (10)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41822,7 +41988,7 @@ GameObject:
   - component: {fileID: 1729382338}
   m_Layer: 0
   m_Name: Forest_field
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42774,7 +42940,7 @@ GameObject:
   - component: {fileID: 1760205977}
   m_Layer: 0
   m_Name: Forest_field (9)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46098,7 +46264,7 @@ GameObject:
   - component: {fileID: 1917822823}
   m_Layer: 0
   m_Name: Forest_field
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47181,7 +47347,7 @@ GameObject:
   - component: {fileID: 1973763076}
   m_Layer: 0
   m_Name: Forest_field (8)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50257,7 +50423,7 @@ GameObject:
   - component: {fileID: 2140492766}
   m_Layer: 0
   m_Name: Forest_field (9)
-  m_TagString: Swamp
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

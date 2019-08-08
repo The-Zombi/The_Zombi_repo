@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour {
 
     public Image HPgage;
     public Image erosionGage;
+    public GameObject gameOverImage;
     PlayerManager playerManager;
 
 
@@ -24,5 +25,10 @@ public class UIManager : MonoBehaviour {
         int erosionMax = playerManager.erosionMax;
         HPgage.fillAmount = (float)HPvalue/HPMax;
         erosionGage.fillAmount = (float)erosionValue / erosionMax;
+
 	}
+
+    public void gameOver(){
+        GameObject.Find("gameOverImage").GetComponent<Image>().enabled = true;
+    }
 }
