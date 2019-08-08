@@ -93,7 +93,6 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(walkSpeed);
         playDir = Input.GetAxis("Horizontal");
         if (isAttacking == false)
         {
@@ -201,8 +200,6 @@ public class PlayerManager : MonoBehaviour
             walkSpeed = normalSpeed;
         }
 
-        Debug.Log(collision.gameObject.name);
-        Debug.Log(collision.gameObject.name.Contains("Forest_deco_covers"));
 
         //沼地にいる場合
         if(collision.gameObject.name.Contains("Forest_deco_covers")){

@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour {
 
     public Image HPgage;
     public Image erosionGage;
-    public GameObject gameOverImage;
+    public GameObject[] gameOverImage;
     PlayerManager playerManager;
 
 

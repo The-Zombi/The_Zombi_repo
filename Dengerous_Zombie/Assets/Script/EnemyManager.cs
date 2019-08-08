@@ -111,7 +111,6 @@ public class EnemyManager : MonoBehaviour {
             damaged(50);
 
         }
-        Debug.Log(gameObject.name);
         
 	}
 	
@@ -134,6 +133,7 @@ public class EnemyManager : MonoBehaviour {
         HP -= damage;
         invisibleFlag = true;
         audioSource.PlayOneShot(damagedSE);
+
     }
 
     void DelayMethod()
