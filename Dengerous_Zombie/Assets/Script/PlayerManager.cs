@@ -55,6 +55,7 @@ public class PlayerManager : MonoBehaviour
     public AudioClip gameOverSE;
     public AudioClip clearSE;
     public AudioClip swingSE;
+    public AudioClip powerDownSE;
     
 
     bool isAttacking;
@@ -92,6 +93,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(walkSpeed);
         playDir = Input.GetAxis("Horizontal");
         if (isAttacking == false)
         {

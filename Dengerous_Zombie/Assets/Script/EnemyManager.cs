@@ -55,8 +55,11 @@ public class EnemyManager : MonoBehaviour {
         );
 
         float speed = walkspeed;
-        if(!ground)
+        float d = Mathf.Abs(transform.position.x - player.transform.position.x);
+        if(!ground || d > 13)
             speed = 0;
+
+        
 
 
         if(enemyDir == "right"){
