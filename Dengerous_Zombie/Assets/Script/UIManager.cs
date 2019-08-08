@@ -28,7 +28,12 @@ public class UIManager : MonoBehaviour {
 
 	}
 
+
     public void gameOver(){
         GameObject.Find("gameOverImage").GetComponent<Image>().enabled = true;
+    }
+
+    public void stageClear(){
+        GameObject.Find("stageClearImage").GetComponent<Image>().enabled = true;
     }
 }

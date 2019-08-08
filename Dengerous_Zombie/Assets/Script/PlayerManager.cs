@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
@@ -86,7 +87,8 @@ public class PlayerManager : MonoBehaviour
         walkSpeed = normalSpeed;
 
         audioSource = gameObject.GetComponent<AudioSource>();
-        
+
+        Invoke("DestroyStageClear", 1.0f);
 
     }
 
@@ -236,6 +238,10 @@ public class PlayerManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Goal"){
             audioSource.PlayOneShot(clearSE);
+
+            UIManager uimanager = GameObject.Find("UIManager").GetComponent<UIManager>();
+            uimanager.stageClear();
+
             Invoke("nextScene", 3.0f);
 
         }
@@ -372,6 +378,11 @@ public class PlayerManager : MonoBehaviour
         if(currentSceneIndex == 8) currentSceneIndex = -1;
         SceneManager.LoadScene(currentSceneIndex+1);
 
+    }
+
+    void DestroyStageClear()
+    {
+        GameObject.Find("stageClearImage").GetComponent<Image>().enabled = false;
     }
 
 
